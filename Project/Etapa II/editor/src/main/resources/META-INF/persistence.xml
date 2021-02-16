@@ -1,0 +1,58 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<persistence-unit name="editorPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<class>br.edu.unifei.ecot13.editor.Cinematografico</class>
+		<class>br.edu.unifei.ecot13.editor.Cliente</class>
+		<class>br.edu.unifei.ecot13.editor.Comercial</class>
+		<class>br.edu.unifei.ecot13.editor.CurtaMetragem</class>
+		<class>br.edu.unifei.ecot13.editor.EdicaoAudio</class>
+		<class>br.edu.unifei.ecot13.editor.EdicaoImagem</class>
+		<class>br.edu.unifei.ecot13.editor.EdicaoVideo</class>
+		<class>br.edu.unifei.ecot13.editor.Editor</class>
+		<class>br.edu.unifei.ecot13.editor.Empresa</class>
+		<class>br.edu.unifei.ecot13.editor.Equipamento</class>
+		<class>br.edu.unifei.ecot13.editor.Estrangeiro</class>
+		<class>br.edu.unifei.ecot13.editor.Estudio</class>
+		<class>br.edu.unifei.ecot13.editor.LongaMetragem</class>
+		<class>br.edu.unifei.ecot13.editor.Nacional</class>
+		<class>br.edu.unifei.ecot13.editor.Nacionalidade</class>
+		<class>br.edu.unifei.ecot13.editor.PessoaFisica</class>
+		<class>br.edu.unifei.ecot13.editor.Produtora</class>
+		<class>br.edu.unifei.ecot13.editor.Software</class>
+		<class>br.edu.unifei.ecot13.editor.Solicitacao</class>
+		<class>br.edu.unifei.ecot13.editor.Video</class>
+		
+		<!-- <class>br.edu.unifei.ecot13.hp.Pessoa</class>-->
+		
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/editor?zeroDateTimeBehavior=convertToNull" />
+			<property name="javax.persistence.jdbc.user" value="editor" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.mariadb.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.password" value="editor" />
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MariaDBDialect" />
+			
+			
+			<property
+				name="javax.persistence.schema-generation.database.action"
+				value="none" />
+				
+			<!-- Possíveis valores para "database action" são:
+				value = "create"
+				value = "none"
+				value = "drop"
+				value = "drop-and-create"
+			 -->
+			
+			
+		</properties>
+	</persistence-unit>
+</persistence>
